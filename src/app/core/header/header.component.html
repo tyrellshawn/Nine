@@ -1,0 +1,28 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <img [routerLink]="'/home'" class="navbar-brand" src="https://imgur.com/download/67YLOVY">
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+
+      <!-- Should be hidden when user is logged in -->
+      <li routerLinkActive="active">
+        <a class="signup banner-right" [routerLink]="'/signup'">Sign Up</a>
+      </li>
+      <!-- Should be hidden when user is logged in -->
+      <li routerLinkActive="active">
+        <a class="signip banner-right" [routerLink]="'/signin'">Sign In</a>
+      </li>
+
+      <!-- Should be hidden when user is not logged in -->
+      <li routerLinkActive="active">
+        <a class="logoff banner-right">Logoff</a>
+      </li>
+
+      <li routerLinkActive="active">
+        <a class="banner-right" [routerLink]="'/social'">Social</a>
+      </li>
+
+      </ul>
+    </div>
+  </nav>
