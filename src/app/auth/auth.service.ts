@@ -56,6 +56,7 @@ export class AuthService implements OnInit, OnDestroy {
             .then(
               (token: string) => {
                 this.token = token;
+                console.log('Authenticated: ' + this.isAuthenticated());
               }
             );
         }

@@ -1,3 +1,28 @@
-<p>
-  signin works!
-</p>
+<h1>Sign Up</h1>
+
+<form [formGroup]="signInForm" (ngSubmit)="onSignIn()">
+
+  <div class="form-group">
+    <label for="email" class="text-label">Email</label>
+    <input
+      type="email"
+      name="email"
+      formControlName='email'
+      class="form-control"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="password" class="text-label">Password</label>
+    <input
+      type="password"
+      name="password"
+      formControlName="password"
+      class="form-control transparent-input"
+    />
+  </div>
+
+  <button class="btn btn-primary" type="submit">Sign In</button>
+</form>
+
+
