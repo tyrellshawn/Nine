@@ -1,5 +1,6 @@
-<h1>Sign Up</h1>
-
+<body>
+<div class="mdc-card">
+<h1>Sign In</h1>
 <form [formGroup]="signInForm" (ngSubmit)="onSignIn()">
 
   <div class="form-group">
@@ -10,9 +11,7 @@
       formControlName='email'
       class="form-control"
     />
-  </div>
 
-  <div class="form-group">
     <label for="password" class="text-label">Password</label>
     <input
       type="password"
@@ -25,4 +24,5 @@
   <button class="btn btn-primary" type="submit">Sign In</button>
 </form>
 
-
+</div>
+</body>
