@@ -1,0 +1,23 @@
+
+
+rt_sigaction(SIGCHLD, {sa_handler=0x55ca41f9ce6a, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7f9ce0acff20}, NULL, 8) = 0
+
+sigaction, rt_sigaction - examine and change a signal action
+
+The sigaction() system call is used to change the action taken by a process on receipt of a specific signal.
+
+
+int sigaction(int signum, const struct sigaction *act, struct sigaction *oldact);
+
+
+findenv finds an environmental variable.
+ The getenv() function searches the environment list to find the environment variable name, and returns a pointer to the corresponding value string.
+
+
+rt_sigaction(SIGCHLD, {sa_handler=0x5607c5ca3e6a, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fda2c9dff20}, NULL, 8) = 0
+rt_sigaction(SIGHUP, {sa_handler=0x5607c5ca3e6a, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fda2c9dff20}, NULL, 8) = 0
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 0), ...}) = 0
+
+
+7. Give the assembly code corresponding to the allocation of pattern[] on line 63. Note that this allocation may be for multiple variables. How do you know your answer is correct?
+Solution

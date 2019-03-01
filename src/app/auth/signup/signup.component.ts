@@ -15,7 +15,11 @@ export class SignupComponent implements OnInit {
   ngOnInit() {
     this.signUpForm = new FormGroup({
       'email': new FormControl('', [Validators.required, Validators.email]),
-      'password': new FormControl('', [Validators.required, Validators.minLength(6)])
+      'password': new FormControl('', [Validators.required, Validators.minLength(6)]),
+      'firstname': new FormControl('', [Validators.required]),
+      'lastname': new FormControl('', [Validators.required]),
+      'phoneNumber': new FormControl('', [Validators.required, Validators.minLength(6)]),
+      
     });
   }
 
@@ -23,7 +27,12 @@ export class SignupComponent implements OnInit {
     console.log('On signup clicked');
     console.log('Sign up form --->', this.signUpForm);
 
-    this.authService.signupUserWithEmail(this.signUpForm.value.email, this.signUpForm.value.password);
+    this.authService.signupUserWithEmail( 
+        this.signUpForm.value.email, 
+        this.signUpForm.value.password, 
+        this.signUpForm.value.firstname,
+        this.signUpForm.value.lastname,
+        this.signUpForm.value.phoneNumber,);
   }
 
 }

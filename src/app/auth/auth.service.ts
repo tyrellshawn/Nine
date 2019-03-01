@@ -35,11 +35,12 @@ export class AuthService implements OnInit, OnDestroy {
   }
 
 
-  signupUserWithEmail(email: string, password: string) {
+  signupUserWithEmail(email: string, password: string, firstname: string, lastname: string, phoneNumber: string) {
     this.firebaseAuth.auth.createUserWithEmailAndPassword(email, password).then(
     (user) => {
-      this.firebaseDatabase.database.ref('/users').push({email, 'other-info': 'somestuff'});
-      this.loginUserWithEmail(email, password);
+      this.firebaseDatabase.database.ref('/users').push({email, firstname, lastname, phoneNumber});
+      this.router.navigate(['/signin']);
+      // this.loginUserWithEmail(email, password);
     })
     .catch(
       error => console.error('An error occured when signining up the user.')
@@ -88,7 +89,7 @@ export class AuthService implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.userSubscription.unsubscribe();
+    // this.userSubscription.unsubscribe();
   }
 
 }
