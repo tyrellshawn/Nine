@@ -1,0 +1,188 @@
+{
+	"panel_0": {
+		"Title": "Navbar",
+		"tabs":["Nine","Sign Up","Sign In","Log Off"],
+		"screens":["/signup","/signin"]
+	},
+	"panel_l": {
+		"Title": "Problem",
+		"bullet_0": {
+			"title":"Accessibility",
+			"value": "Usually Involves going to the bank or third-party"
+
+		},
+		"bullet_1": {
+
+			"title":"Rates",
+			"value": "Depends on the financial instiitution. Premiums, surcharges and processing fees may apply"
+
+		},
+		"bullet_2": {
+			"title":"Lack of Credit Facilities",
+			"value": "Linking Africans in Diaspora to Africa. Remittances to Africa are at a Record Highs but Credit and Investment Facilities are stil struggling"
+
+		}
+
+	},
+	"panel_2": {
+		"Title": "Solution - A platform where users can",
+		"bullet_0": {
+			"title":"Easily Transfer Funds",
+			"value": "Transfer funds from the comfort of phone or laptop"
+
+		},
+		"bullet_1": {
+			"title":"Get Low Rates",
+			"value": "Using and interchange plus pricing model for lowest rates"
+		},
+		"bullet_2": {
+			"title":"Develop Financial Culture",
+			"value": "with Chat Room and IOU feature"
+		}
+	},
+	"panel_3": {
+		"Title": "Problem",
+		"bullet_0": {
+			"title":"Accessibility",
+			"value": "Usually Involves going to the bank or third-party"
+
+		},
+		"bullet_1": {
+			"title":"Rates",
+			"value": "Depends on the financial instiitution. Premiums, surcharges and processing fees may apply"
+		},
+		"bullet_2": {
+			"title":"Lack of Credit Facilities",
+			"value": "Linking Africans in Diaspora to Africa. Remittances to Africa are at a Record Highs but Credit and Investment Facilities are stil struggling"
+		}
+	},
+	"panel_4": {
+		"Title": "Market Validation",
+		"bullet_0": {
+			"title":"WorlRemit.com",
+			"value_form": "3 Million",
+			"value": "Customers in over 80 Countries"
+		},
+		"bullet_1": {
+			"title":"Transferwise.com",
+			"value_form": "4 Million",
+			"value": "Customers in over 80 Countries"
+		}
+	},
+	"panel_5": {
+		"Title": "Market Size",
+		"bullet_0": {
+			"title":"Nigria-USA Remittance Corridot",
+			"value_form": "5.7 Billion",
+			"value": "Servicable Available Market"
+		},
+		"bullet_1": {
+			"title":"Nigria-United Kingdom",
+			"value_form": "3.7 Billion",
+			"value": "Servicable Available Market"
+		},
+		"bullet_2": {
+			"title":"Total Remittance Recieved by Nigeria",
+			"value_form": "20.8 Billion",
+			"value": "Total Available Market"
+		},
+		"bullet_3":{
+			"title": "Source 1",
+			"value": "World Bank Remittance Markets in Africa 2014"
+		},
+		"bullet_4":{
+			"title": "Source 2",
+			"value": "World Bank Migration and Remittance Finance"
+		}
+	},
+	"panel_6":{
+			"title": "Product",
+			"value": "Our Solution"
+		},
+  "panel_7":{
+			"title": "Business Model",
+			"value": "we charge a % for all Nine Services",
+			"bullet_0":{ 
+				"title":"Financial/Remittance services",
+				"value": "15% of Available Market - 3 % + $ 0.20"
+			},
+			"bullet_1":{ 
+				"title":"IOU transactions",
+				"value": "Borrowing &amp; lendin - $0.99 (one time flat fee)g"
+			},
+			"bullet_2":{
+				"title":"Projected by 2021",
+				"value": "200 Million"				
+			}
+		},
+	"panel_8":{
+			"title": "Market Adoption",
+			"value":"Getting the Gateway to Reach Home",
+			"bullet_0":{
+				"title": "Remittance Transactions",
+				"value": "amongst immigrants to friends &amp; family at home would constitute major part of our revenue.",
+				"countries": ["Nigeria","USA","Canada","UK","Some parts of Europe"]
+			},
+			"bullet_1":{
+				"title": "Gateway Integration/Licensing",
+				"value": "Businesses can use Nine solutions to process payments (esp. Nigerian-owned businesses)",
+				"companies": ["Jumia", "Bet9ja","TicketHubNg"]
+			},
+			"bullet_2":{
+				"title": "IOU Transactions",
+				"value": "Would foster a sustainable borrowing &amp; lending system between users, and open opportunities to expand to business accounts."
+			}
+		},
+	"panel_9":{
+			"title":"Competitive Advantage",
+			"value": "Moving modern forward",
+			"bullet_0":{
+				"title": "Focused Market",
+				"value": "for transactions. Nigerian remittance corridors are primary focus."
+
+			},
+			"bullet_1": {
+				"title": "Instant Messaging",
+				"value":"users can send IMs to one another"
+
+			},
+			"bullet_2": {
+				"title": "IOU",
+				"value": "state of the art borrowing feature for Nine users."
+			},
+			"bullet_3": {
+				"title": "Ease of Use/Accessibility",
+				"value": "user-friendly UI/UX on app and webpage"
+			},
+			"bullet_4": {
+				"title": "Profiles",
+				"value": "browse user profiles for ratings, information and become friends."
+			},
+			"bullet_5":{
+				"title": "Design and Brand",
+				"value": "Lifestyle FinTech company, not just trying to provide a service, rather give insight on healthyfinancial practices."
+			}
+		},
+	"panel_10":{
+			"Title": "Team",
+			"value": "Founders",
+			"bullet_0":{
+				"title":"Dolapo Olaniawo",
+				"value" :"CEO &amp; Co-Founder",
+				"program":"3rd year Electrical Engineering",
+				"ref": ["University of Ottawa."]
+			},
+			"bullet_1":{
+				"title":"Daniel Olukiyesi",
+				"value" :"CTO &amp; Co-Founder",
+				"program":"3rd year Computer Engineering",
+				"ref": ["University of Ottawa","Step Networks","OpenText"]
+			},
+			"bullet_2":{
+				"title":"Temitayo Oyelowo",
+				"value" :"COO &amp; Co-Founder",
+				"program":"3rd year Software Engineering",
+				"ref": ["Carelton University.","IBM"]
+			}
+		}
+}
