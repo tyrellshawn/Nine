@@ -1,6 +1,49 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+
+  <a class="navbar-brand" [routerLink]="'/home'"> NINE </a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#blogToggler" 
+    aria-controls="blogToggler" aria-expanded="false" aria-label="Toggle navigation" [ngClass]="{'collapsed': isOpen}"
+    (click)="toggleDropdown()"
+    >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="blogToggler" [ngClass]="{'show': isOpen}">
+      
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <!-- Should be hidden when user is logged in -->
+        <ng-container *ngIf="!isAuthenticated(); else notAuthenticated">
+            <li class="nav-item" routerLinkActive="active">
+              <a class="nav-link signup banner-right" [routerLink]="'/signup'">Sign Up</a>
+            </li>
+            
+            <li class="nav-item" routerLinkActive="active">
+              <a class="nav-link signip banner-right" [routerLink]="'/signin'">Sign In</a>
+            </li>
+        </ng-container>
+        
+        <!-- Should be hidden when user is not logged in -->
+        <ng-template #notAuthenticated>
+
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link banner-right" [routerLink]="'/social'">Social</a>
+          </li>
+
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link banner-right" [routerLink]="'/financial'">Financial</a>
+          </li>
+
+          <li class="nav-item" routerLinkActive="active" *ngIf="isAuthenticated()">
+            <a class="nav-link logoff banner-right" (click)="logoutUser()">Logoff</a>
+          </li>
+
+        </ng-template>
+      </ul>
+    </div>
+
+    <!-- <div class="navbar-header">
       <svg class="shrine-logo-drawer" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
        width="48px" height="48px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve" fill="#000000" focusable="false">
       <g>
@@ -11,29 +54,12 @@
         <rect fill="none" width="24" height="24"/>
       </g>
     </svg>
-      <p class="navbar-brand">Nine</p>
-      <!-- <img [routerLink]="'/home'" class="navbar-brand" src=""> -->
+
     </div>
     <ul class="nav navbar-nav navbar-right">
 
-      <!-- Should be hidden when user is logged in -->
-      <li routerLinkActive="active">
-        <a class="signup banner-right" [routerLink]="'/signup'">Sign Up</a>
-      </li>
-      <!-- Should be hidden when user is logged in -->
-      <li routerLinkActive="active">
-        <a class="signip banner-right" [routerLink]="'/signin'">Sign In</a>
-      </li>
+      
 
-      <!-- Should be hidden when user is not logged in -->
-      <li routerLinkActive="active">
-        <a class="logoff banner-right">Logoff</a>
-      </li>
+      </ul> -->
 
-      <li routerLinkActive="active">
-        <a class="banner-right" [routerLink]="'/social'">Social</a>
-      </li>
-
-      </ul>
-    </div>
   </nav>

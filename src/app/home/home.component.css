@@ -1,0 +1,43 @@
+h2 {
+    font-size: 2.5rem;
+    color: #eeeeee;
+}
+
+p {
+    font-size: 1.3rem;
+    color: #393e46;
+}
+
+.part1, .part3 {
+    background-color: #5f85db;
+    /* min-height: 100vh; */
+}
+
+.part1 {
+    min-height: 100vh;
+    padding: 1.7rem;
+}
+
+.part2, .part3 {
+    min-height: 100vh;
+}
+
+.part1 .right {
+    width: 100%;
+    height: 40rem;
+}
+
+
+@media screen and (min-width: 800px) {
+    .part1 {
+        display: flex;
+        min-height: 100vh;
+        justify-content: flex-end;
+    }
+    
+    .part1 .right {
+        width: 40%;
+        margin-top: 5rem;
+        margin-right: 3rem;
+    }
+}

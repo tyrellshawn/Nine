@@ -1,0 +1,7 @@
+.logoff {
+    cursor: pointer;
+}
+
+.fixed-top {
+    position: sticky !important;
+}

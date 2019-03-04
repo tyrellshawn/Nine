@@ -1,13 +1,7 @@
-
-
-.form-group{
- horiz-align: center;
-  vertical-align: center;
-  background-size: cover;
-  background-position:center ;
+h1 {
+  text-align: center;
 }
 
-.form-control{
-
-
+.bottom-text {
+  padding-top: 0.5em;
 }
