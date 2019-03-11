@@ -1,7 +1,7 @@
 {
 	"panel_0": {
 		"Title": "Navbar",
-		"tabs":["Nine","Sign Up","Sign In","Log Off"],
+		"tabs":["Nine","Sign Up","Sign In"],
 		"screens":["/signup","/signin"]
 	},
 	"panel_l": {
