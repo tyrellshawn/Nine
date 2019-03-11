@@ -59,7 +59,7 @@
 	"panel_4": {
 		"Title": "Market Validation",
 		"bullet_0": {
-			"title":"WorlRemit.com",
+			"title":"WorldRemit.com",
 			"value_form": "3 Million",
 			"value": "Customers in over 80 Countries"
 		},
@@ -72,17 +72,17 @@
 	"panel_5": {
 		"Title": "Market Size",
 		"bullet_0": {
-			"title":"Nigria-USA Remittance Corridot",
+			"title":"Nigeria-USA Remittance Corridot",
 			"value_form": "5.7 Billion",
 			"value": "Servicable Available Market"
 		},
 		"bullet_1": {
-			"title":"Nigria-United Kingdom",
+			"title":"Nigeria-United Kingdom",
 			"value_form": "3.7 Billion",
-			"value": "Servicable Available Market"
+			"value": "Serviceable Available Market"
 		},
 		"bullet_2": {
-			"title":"Total Remittance Recieved by Nigeria",
+			"title":"Total Remittance Receieved by Nigeria",
 			"value_form": "20.8 Billion",
 			"value": "Total Available Market"
 		},
