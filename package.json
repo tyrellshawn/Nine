@@ -24,6 +24,7 @@
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
     "@material/card": "^0.41.1",
+    "@material/textfield": "^1.0.1",
     "angularfire2": "^5.0.2",
     "bootstrap": "^4.2.1",
     "core-js": "^2.5.4",
