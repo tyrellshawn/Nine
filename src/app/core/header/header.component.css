@@ -5,3 +5,6 @@
 .fixed-top {
     position: sticky !important;
 }
+#p_nav{
+  display: none;
+}
