@@ -1,0 +1,74 @@
+{
+	"transactions_0":{
+		"name": "initTransaction",
+			"req_0":{
+			"chargeAuthorization":{
+				"type": "POST",
+				"value":{
+					"curl": "https://api.paystack.co/transaction/charge_authorization",
+					"data": { "authorization_code": "AUTH_72btv547","email": "bojack@horsinaround.com", "amount": 500000
+				},
+				"header": "Authorization: Bearer SECRET_KEY",
+				"header_2":"Content-Type: application/json",
+				"https":"POST" }
+			}
+		}
+	},
+	"transactions_1":{
+		"name": "verifyTransaction",
+			"req_0":{
+			"chargeAuthorization":{
+				"type": "GET",
+				"value":{
+					"curl": "https://api.paystack.co/transaction/verify/",
+					"data": { "transaction_code": "AUTH_72btv547"},
+				"header": "Authorization: Bearer SECRET_KEY",
+				"https":"GET" }
+			}
+		}
+	},
+	"transactions_2":{
+		"name": "listTransaction",
+			"req_0":{
+			"chargeAuthorization":{
+				"type": "GET",
+				"value":{	
+				"curl": "https://api.paystack.co/transaction",	
+				"header": "Authorization: Bearer SECRET_KEY",
+				"header_2":"Content-Type: application/json",
+				"https":"GET" }
+			}
+		}
+	},
+	"transactions_3":{
+		"name": "fetchTransaction",
+			"req_0":{
+			"chargeAuthorization":{
+				"type": "GET",
+				"value":{
+					"curl": "https://api.paystack.co/transaction/",
+					"data": { "transaction_id": "AUTH_72btv547"
+				},
+				"header": "Authorization: Bearer SECRET_KEY",
+				"header_2":"Content-Type: application/json",
+				"https":"GET" }
+			}
+		},
+	"transactions_4":{
+		"name": "chargeAuthorization",
+			"req_0":{
+			"chargeAuthorization":{
+				"type": "POST",
+				"value":{
+					"curl": "https://api.paystack.co/transaction/charge_authorization",
+					"data": { "authorization_code": "AUTH_72btv547","email": "bojack@horsinaround.com", "amount": 500000
+				},
+				"header": "Authorization: Bearer SECRET_KEY",
+				"header_2":"Content-Type: application/json",
+				"https":"POST" }
+			}
+		}
+	}
+
+	}
+}

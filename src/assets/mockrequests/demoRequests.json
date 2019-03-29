@@ -1,0 +1,41 @@
+{"resolveBVN":{
+	"type": "GET",
+	"value":{
+		"curl": "https://api.paystack.co/bank/resolve_bvn/21212917741" 
+		,"header": "Authorization: Bearer SECRET_KEY",
+		"https":"GET" }
+},
+"resolveAccountNumber":{
+
+	"type": "GET",
+	"value":{
+		"curl": "https://api.paystack.co/bank/resolve?",
+		"param1":"accountNumber",
+		"param2": "bankCode"
+		,"header": "Authorization: Bearer SECRET_KEY",
+		"https":"GET" }
+},
+"initiateTransfer":{
+
+	"type": "POST",
+	"value":{
+		"curl": "https://api.paystack.co/transfer",
+		"data": { "source": "balance","reason": "Calm Down", "amount": 3794800,"recipient":"RCP_gx2wn530m0i3w3m"
+
+		}
+		,"header": "Authorization: Bearer SECRET_KEY",
+		"https":"POST" }
+},
+"chargeAuthorization":{
+
+	"type": "POST",
+	"value":{
+		"curl": "https://api.paystack.co/transaction/charge_authorization",
+		"data": { "authorization_code": "AUTH_72btv547","email": "bojack@horsinaround.com", "amount": 500000
+
+		}
+		,"header": "Authorization: Bearer SECRET_KEY",
+		"header_2":"Content-Type: application/json",
+		"https":"POST" }
+}
+}
