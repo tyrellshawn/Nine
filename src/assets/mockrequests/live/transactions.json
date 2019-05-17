@@ -53,7 +53,8 @@
 				"header_2":"Content-Type: application/json",
 				"https":"GET" }
 			}
-		},
+		}
+	},
 	"transactions_4":{
 		"name": "chargeAuthorization",
 			"req_0":{
@@ -70,5 +71,4 @@
 		}
 	}
 
-	}
 }
