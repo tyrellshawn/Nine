@@ -32,6 +32,12 @@
           <li class="nav-item" routerLinkActive="active">
             <a class="nav-link banner-right" [routerLink]="'/financial'">Financial</a>
           </li>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link banner-right" [routerLink]="'/iou'">Request IOU</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link banner-right" [routerLink]="'/transfer'">Transfer</a>
+          </li>
 
           <li class="nav-item" routerLinkActive="active" *ngIf="isAuthenticated()">
             <a class="nav-link logoff banner-right" (click)="logoutUser()">Logoff</a>

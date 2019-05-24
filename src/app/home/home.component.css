@@ -10,11 +10,22 @@ p {
     font-size: 1.3rem;
     color: #393e46;
 }
+.logo{
+  /* Rectangle */
+
+  position: inherit;
+  width: 100%;
+  height: 420px;
+
+  background: url(logo_yang.svg);
+
+}
+
 
 .panel_1 {
-    background-color: #5f85db;
+    background-color: #000000;
     /* min-height: 100vh; */
-  opacity: 0.5;
+
 }
 
 .panel_1{
@@ -27,22 +38,8 @@ p {
     min-height: 100vh;
 }
 
- .panel_1 .right {
+ .panel_1 {
     width: 100%;
     height: 40rem;
 }
 
-
-@media screen and (min-width: 800px) {
-     .panel_1 {
-        display: flex;
-        min-height: 100vh;
-        justify-content: flex-end;
-    }
-    
-    .panel_1 .right {
-        width: 40%;
-        margin-top: 5rem;
-        margin-right: 3rem;
-    }
-}
