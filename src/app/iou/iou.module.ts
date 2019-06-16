@@ -1,10 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { IOUComponent } from './iou.component';
+import { IOURoutingModule } from './ioul-routing.module';
+
 @NgModule({
-  imports: [
-    CommonModule
+  declarations: [
+    IOUComponent,
   ],
-  declarations: []
+  imports: [
+    CommonModule,
+    IOURoutingModule
+  ]
 })
-export class IouModule { }
+export class IOUModule { }

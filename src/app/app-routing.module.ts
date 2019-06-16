@@ -7,7 +7,7 @@ import { AuthGaurd } from './auth/auth-gaurd.service';
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'social', canActivate: [AuthGaurd], loadChildren: './social/social.module#SocialModule'},
-  {path: 'iou', canActivate: [AuthGaurd], loadChildren: './iou/iou.module#IouModule'},
+  {path: 'iou', canActivate: [AuthGaurd], loadChildren: './iou/iou.module#IOUModule'},
   {path: 'financial', canActivate: [AuthGaurd], loadChildren: './financial/financial.module#FinancialModule'},
   {path: '', pathMatch: 'full', redirectTo: 'home'}
 ];

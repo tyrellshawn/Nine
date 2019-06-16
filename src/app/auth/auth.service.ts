@@ -18,6 +18,19 @@ export class AuthService implements OnInit, OnDestroy {
   constructor(private firebaseAuth: AngularFireAuth,
               private firebaseDatabase: AngularFireDatabase,
               private router: Router) {
+                this.firebaseAuth.auth.onAuthStateChanged(user => {
+                  if (user) {
+                    // User is signed in.
+                    console.log("User is signed in");
+                    console.log(user);
+                    this.token = user.refreshToken;
+                  } else {
+                    // User is signed out.
+                    console.log("User is NOT signed in");
+                  }
+                  this.authStatusSubscription.next(this.authStatus);
+                  // this.authenticationStateSubscription.next(this.isAuthenticated());
+                });
               }
 
   ngOnInit() {
