@@ -10,17 +10,11 @@ p {
     font-size: 1.3rem;
     color: #393e46;
 }
-.logo{
-  /* Rectangle */
 
-  position: inherit;
-  width: 100%;
-
-}
 
 
 .panel_1 {
-    background-color: #1a1a1a;
+    background-color: #000000;
     /* min-height: 100vh; */
 
 }
