@@ -9,6 +9,7 @@ const appRoutes: Routes = [
   {path: 'social', canActivate: [AuthGaurd], loadChildren: './social/social.module#SocialModule'},
   {path: 'iou', canActivate: [AuthGaurd], loadChildren: './iou/iou.module#IOUModule'},
   {path: 'financial', canActivate: [AuthGaurd], loadChildren: './financial/financial.module#FinancialModule'},
+  {path: 'transfer', canActivate: [AuthGaurd], loadChildren: './transfer/transfer.module#TransferModule'},
   {path: '', pathMatch: 'full', redirectTo: 'home'}
 ];
 
