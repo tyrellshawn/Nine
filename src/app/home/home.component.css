@@ -1,5 +1,6 @@
 #p1,#p2,#p3,#p4,#p5,#p6,#p7,#p8,#p9,#p10{
  /* display: none;*/
+  min-height: 5vh;
 }
 h2 {
     font-size: 2.5rem;
@@ -20,13 +21,12 @@ p {
 }
 
 .panel_1{
-    min-height: 100vh;
+
     padding: 1.7rem;
 }
 
 .panel_2 {
 
-    min-height: 100vh;
 }
 
  .panel_1 {
