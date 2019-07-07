@@ -8,23 +8,7 @@
 #p_nav{
  /* display: none;*/
 }
-.logo{
-  /* Rectangle */
 
-  position: inherit;
-  width: 100%;
-  /* eNIN */
-
-  position: absolute;
-  height: 72.11px;
-  left: 772.41px;
-  top: 475.94px;
-
-  background: #000000;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
-
-
-}
 .bg-dark{
   background: black;
 
