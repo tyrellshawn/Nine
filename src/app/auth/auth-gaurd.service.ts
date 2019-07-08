@@ -12,6 +12,7 @@ export class AuthGaurd implements CanActivate, CanLoad {
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     if (!this.authService.isAuthenticated()) {
+      console.log("NOT authenticated in can activate");
       this.router.navigate(['/']);
     }
     return this.authService.isAuthenticated();
@@ -19,6 +20,7 @@ export class AuthGaurd implements CanActivate, CanLoad {
 
   canLoad(route: Route) {
     if (!this.authService.isAuthenticated()) {
+      console.log("NOT authenticated in can load");
       this.router.navigate(['/']);
     }
     return this.authService.isAuthenticated();

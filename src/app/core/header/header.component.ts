@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { AuthService } from 'src/app/auth/auth.service';
@@ -10,11 +10,17 @@ import { AuthService } from 'src/app/auth/auth.service';
 })
 export class HeaderComponent implements OnInit {
   
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthService, private router: Router, private _ngZone: NgZone) { }
 
   isOpen: boolean = false;
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.authService.authenticationStateSubscription.subscribe(correct => {
+      if (!!this.isAuthenticated) {
+        this._ngZone.run(() => this.router.navigate(['/home']));
+      }
+    });
+  }
 
   isAuthenticated(): boolean {
     return this.authService.isAuthenticated();

@@ -14,6 +14,7 @@ export class AuthService implements OnInit, OnDestroy {
   userSubscription: Subscription;
   private authStatus = 'signUp';
   authStatusSubscription = new Subject<string>();
+  authenticationStateSubscription = new Subject<Boolean>();
 
   constructor(private firebaseAuth: AngularFireAuth,
               private firebaseDatabase: AngularFireDatabase,
@@ -28,8 +29,8 @@ export class AuthService implements OnInit, OnDestroy {
                     // User is signed out.
                     console.log("User is NOT signed in");
                   }
-                  this.authStatusSubscription.next(this.authStatus);
-                  // this.authenticationStateSubscription.next(this.isAuthenticated());
+                  this.authStatusSubscription.next(this.token);
+                  this.authenticationStateSubscription.next(this.isAuthenticated());
                 });
               }
 
