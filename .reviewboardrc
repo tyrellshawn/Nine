@@ -1,3 +1,0 @@
-REVIEWBOARD_URL = "http://codereview.opentext.com"
-REPOSITORY = "Unicode P4"
-REPOSITORY_TYPE = "perforce"
