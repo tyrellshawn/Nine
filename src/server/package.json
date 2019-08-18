@@ -1,0 +1,23 @@
+{
+  "name": "sports-app-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "Temitayo Oyelowo",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.6.0",
+    "nodemon": "^1.19.1",
+    "paystack": "^2.0.1",
+    "request": "^2.88.0"
+  }
+}
