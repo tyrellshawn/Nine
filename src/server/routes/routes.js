@@ -121,12 +121,4 @@ router.post('/create/customer', (req, res) => {
         });
 });
 
-// request.get({
-//     // headers: {'Authorization' : 'Bearer SECRET_KEY'},
-//     url:     'http://www.google.com',
-//     }, function(error, response, body){
-//         console.error(`Error: ${error}`);
-//         console.log('Status Code:', response && response.statusCode);
-//         // console.log(`Body: ${body}`)
-//     });
 module.exports = router;
