@@ -15,6 +15,7 @@ export class AuthService implements OnInit, OnDestroy {
   authStatusSubscription = new Subject<string>();
   authenticationStateSubscription = new Subject<Boolean>();
 
+  // TODO: Improve authentication so experience is seamless
   constructor(
     private firebaseAuth: AngularFireAuth,
     private firebaseDatabase: AngularFireDatabase,

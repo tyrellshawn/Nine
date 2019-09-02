@@ -1,71 +1,72 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id ="p_nav">
-
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="p_nav">
   <a class="navbar-brand" [routerLink]="'/home'">
-    <img src="assets/nine_logo.png">
-     </a>
+    <img src="assets/nine_logo.png" />
+  </a>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#blogToggler" 
-    aria-controls="blogToggler" aria-expanded="false" aria-label="Toggle navigation" [ngClass]="{'collapsed': isOpen}"
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#blogToggler"
+    aria-controls="blogToggler"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+    [ngClass]="{ collapsed: isOpen }"
     (click)="toggleDropdown()"
-    >
+  >
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="blogToggler" [ngClass]="{'show': isOpen}">
-      
-      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-        <!-- Should be hidden when user is logged in -->
-        <ng-container *ngIf="!isAuthenticated(); else notAuthenticated">
-            <li class="nav-item" routerLinkActive="active">
-              <a class="nav-link signup banner-right" [routerLink]="'/signup'">Sign Up</a>
-            </li>
-            
-            <li class="nav-item" routerLinkActive="active">
-              <a class="nav-link signip banner-right" [routerLink]="'/signin'">Sign In</a>
-            </li>
-        </ng-container>
-        
-        <!-- Should be hidden when user is not logged in -->
-        <ng-template #notAuthenticated>
+  <div
+    class="collapse navbar-collapse"
+    id="blogToggler"
+    [ngClass]="{ show: isOpen }"
+  >
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+      <!-- Should be hidden when user is logged in -->
+      <ng-container *ngIf="!isAuthenticated(); else notAuthenticated">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link signup banner-right" [routerLink]="'/signup'"
+            >Sign Up</a
+          >
+        </li>
 
-          <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link banner-right" [routerLink]="'/social'">Social</a>
-          </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link signip banner-right" [routerLink]="'/signin'"
+            >Sign In</a
+          >
+        </li>
+      </ng-container>
 
-          <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link banner-right" [routerLink]="'/financial'">Financial</a>
-          </li>
-          <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link banner-right" [routerLink]="'/iou'">Request IOU</a>
-          </li>
-          <li class="nav-item" routerLinkActive="active">
-            <a class="nav-link banner-right" [routerLink]="'/transfer'">Transfer</a>
-          </li>
+      <!-- Should be hidden when user is not logged in -->
+      <ng-template #notAuthenticated>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link banner-right" [routerLink]="'/social'">Social</a>
+        </li>
 
-          <li class="nav-item" routerLinkActive="active" *ngIf="isAuthenticated()">
-            <a class="nav-link logoff banner-right" (click)="logoutUser()">Logoff</a>
-          </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link banner-right" [routerLink]="'/financial'"
+            >Financial</a
+          >
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link banner-right" [routerLink]="'/iou'">Request IOU</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link banner-right" [routerLink]="'/transfer'"
+            >Transfer</a
+          >
+        </li>
 
-        </ng-template>
-      </ul>
-    </div>
-
-    <!-- <div class="navbar-header">
-      <svg class="shrine-logo-drawer" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-       width="48px" height="48px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve" fill="#000000" focusable="false">
-      <g>
-        <g>
-          <path d="M17,2H7L2,6.62L12,22L22,6.62L17,2z M16.5,3.58l3.16,2.92H16.5V3.58z M7.59,3.5H15v3H4.34L7.59,3.5z
-             M11.25,18.1L7.94,13h3.31V18.1z M11.25,11.5H6.96L4.69,8h6.56V11.5z M16.5,12.32 M12.75,18.09V8h6.56L12.75,18.09z"/>
-        </g>
-        <rect fill="none" width="24" height="24"/>
-      </g>
-    </svg>
-
-    </div>
-    <ul class="nav navbar-nav navbar-right">
-
-      
-
-      </ul> -->
-
-  </nav>
+        <li
+          class="nav-item"
+          routerLinkActive="active"
+          *ngIf="isAuthenticated()"
+        >
+          <a class="nav-link logoff banner-right" (click)="logoutUser()"
+            >Logoff</a
+          >
+        </li>
+      </ng-template>
+    </ul>
+  </div>
+</nav>
