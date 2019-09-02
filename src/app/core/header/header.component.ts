@@ -9,27 +9,18 @@ import { AuthService } from 'src/app/auth/auth.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-<<<<<<< HEAD
   constructor(
     private authService: AuthService,
     private router: Router,
     private _ngZone: NgZone
   ) {}
-=======
-  
-  constructor(private authService: AuthService, private router: Router, private _ngZone: NgZone) { }
->>>>>>> web-app
 
   isOpen: boolean = false;
 
   ngOnInit() {
     this.authService.authenticationStateSubscription.subscribe(correct => {
       if (!!this.isAuthenticated) {
-<<<<<<< HEAD
         this._ngZone.run(() => this.router.navigate(['/home']));
-=======
-        this._ngZone.run(() => this.router.navigate(['/home']))
->>>>>>> web-app
       }
     });
   }
