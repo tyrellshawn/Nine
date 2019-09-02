@@ -7,7 +7,6 @@ import { Subscription, Subject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-
 export class AuthService implements OnInit, OnDestroy {
   token: string;
   role: string;
@@ -16,26 +15,27 @@ export class AuthService implements OnInit, OnDestroy {
   authStatusSubscription = new Subject<string>();
   authenticationStateSubscription = new Subject<Boolean>();
 
-  constructor(private firebaseAuth: AngularFireAuth,
-              private firebaseDatabase: AngularFireDatabase,
-              private router: Router) {
-                this.firebaseAuth.auth.onAuthStateChanged(user => {
-                  if (user) {
-                    // User is signed in.
-                    console.log("User is signed in");
-                    console.log(user);
-                    this.token = user.refreshToken;
-                  } else {
-                    // User is signed out.
-                    console.log("User is NOT signed in");
-                  }
-                  this.authStatusSubscription.next(this.token);
-                  this.authenticationStateSubscription.next(this.isAuthenticated());
-                });
-              }
-
-  ngOnInit() {
+  constructor(
+    private firebaseAuth: AngularFireAuth,
+    private firebaseDatabase: AngularFireDatabase,
+    private router: Router
+  ) {
+    this.firebaseAuth.auth.onAuthStateChanged(user => {
+      if (user) {
+        // User is signed in.
+        console.log('User is signed in');
+        console.log(user);
+        this.token = user.refreshToken;
+      } else {
+        // User is signed out.
+        console.log('User is NOT signed in');
+      }
+      this.authStatusSubscription.next(this.token);
+      this.authenticationStateSubscription.next(this.isAuthenticated());
+    });
   }
+
+  ngOnInit() {}
 
   toggleStatus() {
     console.log('Old status is -->', this.authStatus);
@@ -48,37 +48,41 @@ export class AuthService implements OnInit, OnDestroy {
     this.authStatusSubscription.next(this.authStatus);
   }
 
-
-  signupUserWithEmail(email: string, password: string, firstname: string, lastname: string, phoneNumber: string) {
-    this.firebaseAuth.auth.createUserWithEmailAndPassword(email, password).then(
-    (user) => {
-      this.firebaseDatabase.database.ref('/users').push({email, firstname, lastname, phoneNumber});
-      this.router.navigate(['/signin']);
-      // this.loginUserWithEmail(email, password);
-    })
-    .catch(
-      error => console.error('An error occured when signining up the user.')
-    );
+  signupUserWithEmail(
+    email: string,
+    password: string,
+    firstname: string,
+    lastname: string,
+    phoneNumber: string
+  ) {
+    this.firebaseAuth.auth
+      .createUserWithEmailAndPassword(email, password)
+      .then(user => {
+        this.firebaseDatabase.database
+          .ref('/users')
+          .push({ email, firstname, lastname, phoneNumber });
+        this.router.navigate(['/signin']);
+        // this.loginUserWithEmail(email, password);
+      })
+      .catch(error =>
+        console.error('An error occured when signining up the user.')
+      );
   }
 
   loginUserWithEmail(email, password) {
-    this.firebaseAuth.auth.signInWithEmailAndPassword(email, password)
-      .then(
-        response => {
-          this.router.navigate(['/']);
-          console.log(this.firebaseAuth.auth.currentUser);
-          this.firebaseAuth.auth.currentUser.getIdToken()
-            .then(
-              (token: string) => {
-                this.token = token;
-                console.log('Authenticated: ' + this.isAuthenticated());
-              }
-            );
-        }
-      )
-      .catch(
-        error => console.error(error)
-      );
+    this.firebaseAuth.auth
+      .signInWithEmailAndPassword(email, password)
+      .then(response => {
+        this.router.navigate(['/']);
+        console.log(this.firebaseAuth.auth.currentUser);
+        this.firebaseAuth.auth.currentUser
+          .getIdToken()
+          .then((token: string) => {
+            this.token = token;
+            console.log('Authenticated: ' + this.isAuthenticated());
+          });
+      })
+      .catch(error => console.error(error));
   }
 
   logoutUser() {
@@ -89,11 +93,9 @@ export class AuthService implements OnInit, OnDestroy {
 
   getToken() {
     /** Returns a promise */
-    this.firebaseAuth.auth.currentUser.getIdToken().then(
-      (token: string) => {
-        this.token = token;
-      }
-    );
+    this.firebaseAuth.auth.currentUser.getIdToken().then((token: string) => {
+      this.token = token;
+    });
     return this.token;
   }
 
@@ -105,5 +107,5 @@ export class AuthService implements OnInit, OnDestroy {
   ngOnDestroy() {
     // this.userSubscription.unsubscribe();
   }
-
+  registerPaystack() {}
 }

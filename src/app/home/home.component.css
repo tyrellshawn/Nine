@@ -1,7 +1,4 @@
-
-
-.landing_photo{
-
+.landing_photo {
   position: absolute;
   padding-left: 30%;
   top: 30%;
@@ -10,18 +7,16 @@
   height: 100vh;
   filter: grayscale(100%);
 
-  background: url("~src/assets/home/landing_face_1.png");
+  background: url('~src/assets/home/landing_face_1.png');
   background-repeat: no-repeat;
-
 }
-.country_selector{
+.country_selector {
   position: absolute;
   align-content: end;
 }
-.country_selector{
+.country_selector {
   alignment: center;
   position: absolute;
   padding-left: 50%;
   padding-top: 20%;
 }
-

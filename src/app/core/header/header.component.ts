@@ -9,8 +9,11 @@ import { AuthService } from 'src/app/auth/auth.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  
-  constructor(private authService: AuthService, private router: Router, private _ngZone: NgZone) { }
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+    private _ngZone: NgZone
+  ) {}
 
   isOpen: boolean = false;
 
