@@ -9,18 +9,9 @@ import { AuthModule } from './auth/auth.module';
 import { MaterialModule } from './material.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    HomeComponent
-  ],
-  imports: [
-    BrowserModule,
-    AuthModule,
-    AppRoutingModule,
-    MaterialModule
-  ],
+  declarations: [AppComponent, HeaderComponent, HomeComponent],
+  imports: [BrowserModule, AuthModule, AppRoutingModule, MaterialModule],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

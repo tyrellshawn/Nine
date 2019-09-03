@@ -1,3 +1,65 @@
-<p>
-  transfer works!
-</p>
+<div class="container">
+  <div class="row ml-auto justify-content-md-center">
+    <div class="col-sm-12 col-md-10 col-lg-8 col-xl-8">
+      <h1>Transfer</h1>
+
+      <form>
+        <div class="form-group">
+          <label for="email" class="text-label">Destination Email</label>
+          <input
+            type="email"
+            name="email"
+            formControlName="email"
+            class="form-control"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="firstname" class="text-label">First Name</label>
+          <input
+            type="text"
+            name="firstname"
+            formControlName="firstname"
+            class="form-control"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="lastname" class="text-label">Last Name</label>
+          <input
+            type="text"
+            name="lastname"
+            formControlName="lastname"
+            class="form-control"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="phoneNumber" class="text-label">Phone Number</label>
+          <input
+            type="text"
+            name="phoneNumber"
+            formControlName="phoneNumber"
+            class="form-control"
+          />
+        </div>
+        <div class="form-group">
+          <label for="sendNumber" class="text-label">Amount</label>
+          <input
+            type="number"
+            step="0.01"
+            min="0"
+            name="sendNumber"
+            formControlName="sendNumber"
+            class="form-control"
+          />
+        </div>
+
+        <button class="btn btn-primary" type="submit">Transfer</button>
+        <button class="btn btn-secondary" [routerLink]="'/financial'">
+          Cancel
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

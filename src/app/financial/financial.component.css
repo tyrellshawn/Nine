@@ -1,0 +1,14 @@
+.finance_selector {
+  position: absolute;
+  align-content: end;
+}
+.finance_selector {
+  alignment: center;
+  position: absolute;
+  padding-left: 50%;
+  padding-top: 10%;
+}
+.my_balance {
+  padding-top: 15%;
+  padding-left: 50%;
+}
