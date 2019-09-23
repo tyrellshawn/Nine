@@ -1,15 +1,17 @@
 .logoff {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .fixed-top {
-    position: sticky !important;
+  position: sticky !important;
 }
-#p_nav{
- /* display: none;*/
+#p_nav {
+  /* display: none;*/
 }
 
-.bg-dark{
+.bg-dark {
   background: black;
-
+}
+.nav-wrapper {
+  background: black;
 }
