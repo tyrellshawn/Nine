@@ -6,6 +6,7 @@ import { ChatRoomRoutingModule } from './chat-room-routing.module';
 import { ChatFormModule } from '../chat-form/chat-form.module';
 import { FeedModule } from '../feed/feed.module';
 import { UserListModule } from '../user-list/user-list.module';
+import { MessageModule } from '../message/message.module';
 
 @NgModule({
   declarations: [ChatRoomComponent],
@@ -14,7 +15,8 @@ import { UserListModule } from '../user-list/user-list.module';
     ChatRoomRoutingModule,
     ChatFormModule,
     FeedModule,
-    UserListModule
+    UserListModule,
+    MessageModule
   ],
   exports: [ChatRoomComponent]
 })

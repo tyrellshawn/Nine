@@ -2,8 +2,8 @@ import { Injectable, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFireDatabase } from '@angular/fire/database';
-import { Subscription, Subject } from 'rxjs';
-
+import { Subscription, Subject, Observable } from 'rxjs';
+import * as firebase from 'firebase/app';
 @Injectable({
   providedIn: 'root'
 })
@@ -14,6 +14,9 @@ export class AuthService implements OnInit, OnDestroy {
   private authStatus = 'signUp';
   authStatusSubscription = new Subject<string>();
   authenticationStateSubscription = new Subject<Boolean>();
+  private authState: any;
+  private user: Observable<firebase.User>;
+  private email: string;
 
   // TODO: Improve authentication so experience is seamless
   constructor(
@@ -27,6 +30,10 @@ export class AuthService implements OnInit, OnDestroy {
         console.log('User is signed in');
         console.log(user);
         this.token = user.refreshToken;
+        this.user = firebaseAuth.authState;
+
+        this.email = user.email;
+        console.log('The User email is: ' + this.email);
       } else {
         // User is signed out.
         console.log('User is NOT signed in');
@@ -74,6 +81,8 @@ export class AuthService implements OnInit, OnDestroy {
     this.firebaseAuth.auth
       .signInWithEmailAndPassword(email, password)
       .then(response => {
+        this.authState = response;
+
         this.router.navigate(['/']);
         console.log(this.firebaseAuth.auth.currentUser);
         this.firebaseAuth.auth.currentUser
@@ -90,6 +99,7 @@ export class AuthService implements OnInit, OnDestroy {
     this.firebaseAuth.auth.signOut();
     this.token = null;
     this.role = null;
+    this.email = null;
   }
 
   getToken() {
@@ -98,6 +108,12 @@ export class AuthService implements OnInit, OnDestroy {
       this.token = token;
     });
     return this.token;
+  }
+  authUser() {
+    return this.user;
+  }
+  get currentUserEmail(): string {
+    return this.authState !== null ? this.email : '';
   }
 
   isAuthenticated() {
