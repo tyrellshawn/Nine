@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Observable } from 'rxjs';
-import { AuthService } from '../../auth/auth.service';
 import * as firebase from 'firebase/app';
 
 import { ChatMessage } from '../models/chat-message.model';
@@ -39,10 +38,10 @@ export class ChatService {
     return this.db.object(path);
   }
 
-  // getUsers() {
-  //   const path = '/users';
-  //   return this.db.list(path);
-  // }
+  getUsers(): Observable<User[]> {
+    const path = '/users';
+    return this.db.list(path).valueChanges();
+  }
 
   sendMessage(msg: string) {
     const timestamp = this.getTimeStamp();
@@ -64,6 +63,9 @@ export class ChatService {
   getMessages(): AngularFireList<ChatMessage> {
     // query to create our message feed binding
     return this.db.list('messages');
+  }
+  getTextMessages(): Observable<ChatMessage[]> {
+    return this.db.list('messages').valueChanges();
   }
 
   getTimeStamp() {

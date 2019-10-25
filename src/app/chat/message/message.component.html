@@ -1,3 +1,16 @@
-<p>
-  message works!
-</p>
+<div
+  class="messageContainer"
+  [ngClass]="{ isOwnMessageContainer: isOwnMessage }"
+>
+  <div class="messageData" [ngClass]="{ isOwnMessageData: isOwnMessage }">
+    <span class="sender" [ngClass]="{ isOwnSender: isOwnMessage }">
+      {{ userName }}
+    </span>
+    <span class="timestamp" [ngClass]="{ isOwnTimestamp: isOwnMessage }">
+      {{ timeStamp | date: 'medium' }}
+    </span>
+  </div>
+  <div class="messageContent" [ngClass]="{ isOwnMessageContent: isOwnMessage }">
+    {{ messageContent }}
+  </div>
+</div>
