@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthModule } from './auth/auth.module';
 import { MaterialModule } from './material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MaterialModule } from './material.module';
   imports: [
     BrowserModule, 
     AuthModule, 
-    AppRoutingModule, 
+    AppRoutingModule,
+    BrowserAnimationsModule,
     MaterialModule
   ],
   providers: [],

@@ -13,14 +13,12 @@ import {
     MatButtonModule, MatSidenavModule, MatListModule,
     MatRippleModule, MatCardModule, MatTableModule,
     MatFormFieldModule, MatToolbarModule, MatIconModule,
-    BrowserAnimationsModule, 
   ],
   exports: [
     MatCheckboxModule, MatGridListModule, MatInputModule,
     MatButtonModule, MatSidenavModule, MatListModule,
     MatRippleModule, MatCardModule, MatTableModule,
     MatFormFieldModule, MatToolbarModule, MatIconModule,
-    BrowserAnimationsModule, 
   ]
 })
 export class MaterialModule { }

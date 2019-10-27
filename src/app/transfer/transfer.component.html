@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <div class="row ml-auto justify-content-md-center">
     <div class="col-sm-12 col-md-10 col-lg-8 col-xl-8">
       <h1>Transfer</h1>
@@ -61,5 +61,83 @@
         </button>
       </form>
     </div>
-  </div>
+  </div> 
+</div> -->
+
+<div class="outside-container">
+    <mat-card-content>
+        <form [formGroup]="transferForm" (ngSubmit)="onTransfer()">
+           <mat-form-field class="expand-width">
+                  <mat-label>First Name</mat-label>
+                  <input  
+                    matInput 
+                    type="text"
+                    placeholder="First name"
+                    name="firstname"
+                    formControlName="firstname"
+                    required>
+               </mat-form-field>
+               <mat-form-field class="expand-width">
+                  <mat-label>Last Name</mat-label>
+                  <input
+                    matInput
+                    type="text"
+                    placeholder="Last Name"
+                    name="lastname"
+                    formControlName="lastname"
+                    required>
+               </mat-form-field>
+               <mat-form-field class="expand-width">
+                  <mat-label>Email</mat-label>
+                  <input
+                    matInput
+                    type="email"
+                    placeholder="Email"
+                    name="email"
+                    formControlName="email"
+                    required
+                  >
+               </mat-form-field>
+               <mat-form-field class="expand-width">
+                  <mat-label>Phone Number</mat-label>
+                  <input
+                    matInput
+                    type="text"
+                    placeholder="Phone Number"
+                    name="phoneNumber"
+                    formControlName="phoneNumber"
+                    required
+                  >
+               </mat-form-field>
+               <mat-form-field class="expand-width">
+                  <mat-label>Amount</mat-label>
+                  <input
+                    matInput
+                    type="number"
+                    placeholder="amount"
+                    name="amount"
+                    formControlName="amount"
+                    required
+                  >
+               </mat-form-field>
+
+              <button 
+                mat-raised-button
+                color="primary"
+                type="submit"
+              >
+                Transfer
+              </button>
+
+              <button
+                type="button"
+                mat-raised-button
+                color="warn"
+                [routerLink]="'/financial'"
+              >
+                Cancel
+              </button>
+        </form>
+
+      </mat-card-content>
 </div>

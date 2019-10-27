@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { TransferRoutingModule } from './transfer-routing.module';
 import { TransferComponent } from './transfer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from '../material.module';
 
 @NgModule({
   declarations: [
@@ -10,6 +12,9 @@ import { TransferComponent } from './transfer.component';
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    MaterialModule,
+    ReactiveFormsModule,
     TransferRoutingModule
   ]
 })

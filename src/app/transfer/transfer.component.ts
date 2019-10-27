@@ -14,10 +14,7 @@ export class TransferComponent implements OnInit {
   ngOnInit() {
     this.transferForm = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.email]),
-      password: new FormControl('', [
-        Validators.required,
-        Validators.minLength(6)
-      ]),
+      amount: new FormControl('', [Validators.required]),
       firstname: new FormControl('', [Validators.required]),
       lastname: new FormControl('', [Validators.required]),
       phoneNumber: new FormControl('', [
@@ -25,5 +22,9 @@ export class TransferComponent implements OnInit {
         Validators.minLength(6)
       ])
     });
+  }
+
+  onTransfer() {
+    console.log("Transfering...");
   }
 }
