@@ -1,39 +1,39 @@
+<div class="outside-container">
+    <mat-card-content>
+        <form [formGroup]="signInForm" (ngSubmit)="onSignIn()">
 
+            <mat-form-field class="expand-width">
+                <mat-label>Email</mat-label>
+                <input
+                  matInput
+                  type="email"
+                  placeholder="Email"
+                  name="email"
+                  formControlName="email"
+                >
+            </mat-form-field>
 
-<div class="container">
-    <div class="row justify-content-md-center">
-      <div class="col-sm-12 col-md-10 col-lg-8 col-xl-8">
-  
-          <h1>Sign In </h1>
-
-          <form [formGroup]="signInForm" (ngSubmit)="onSignIn()">
-
-            <div class="form-group">
-              <label for="email" class="text-label">Email</label>
-              <input
-                type="email"
-                name="email"
-                formControlName='email'
-                class="form-control"
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="password" class="text-label">Password</label>
-              <input
+            <mat-form-field class="expand-width">
+              <mat-label>Password</mat-label>
+              <input  
+                matInput
                 type="password"
+                placeholder="Password"
                 name="password"
                 formControlName="password"
-                class="form-control transparent-input"
-              />
-            </div>
-            
-            <button class="btn btn-primary" type="submit">Sign In</button>
-          </form>
-  
+              >
+            </mat-form-field>
+
+            <button 
+              class="mat-raised-button"
+              color="primary"
+              type="submit"
+            >
+              Sign In
+            </button>
+
+        </form>
+
           <p class="lead .bottom-text">Don't have an account? <a routerLink="/signup">Sign Up</a></p>
-  
-      </div>
-    </div>
-  
-  </div>
+    </mat-card-content>
+</div>

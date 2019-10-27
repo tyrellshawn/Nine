@@ -1,7 +1,14 @@
-h1 {
-  text-align: center;
-}
-
 .bottom-text {
   padding-top: 0.5em;
+}
+ 
+.expand-width {
+  width: 100%;
+}
+
+.outside-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
 }
