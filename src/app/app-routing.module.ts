@@ -3,9 +3,17 @@ import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { AuthGaurd } from './auth/auth-gaurd.service';
-
+import { SimulatorFormComponent } from './simulator/simulator-form/simulator-form.component';
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
+
+  {
+    path: 'simulator',
+    component: SimulatorFormComponent,
+    loadChildren:
+      './simulator/simulator-form/simulator-form.module#SimulatorFormModule'
+  },
+
   {
     path: 'social',
     canActivate: [AuthGaurd],

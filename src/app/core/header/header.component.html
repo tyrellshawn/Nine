@@ -23,6 +23,11 @@
   >
     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
       <!-- Should be hidden when user is logged in -->
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link signup banner-right" [routerLink]="'/simulator'"
+          >Simulator</a
+        >
+      </li>
       <ng-container *ngIf="!isAuthenticated(); else notAuthenticated">
         <li class="nav-item" routerLinkActive="active">
           <a class="nav-link signup banner-right" [routerLink]="'/signup'"

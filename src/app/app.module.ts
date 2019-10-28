@@ -7,10 +7,16 @@ import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthModule } from './auth/auth.module';
 import { MaterialModule } from './material.module';
-
+import { SimulatorFormModule } from './simulator/simulator-form/simulator-form.module';
 @NgModule({
   declarations: [AppComponent, HeaderComponent, HomeComponent],
-  imports: [BrowserModule, AuthModule, AppRoutingModule, MaterialModule],
+  imports: [
+    BrowserModule,
+    AuthModule,
+    AppRoutingModule,
+    MaterialModule,
+    SimulatorFormModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
