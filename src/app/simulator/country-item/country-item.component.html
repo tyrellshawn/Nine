@@ -1,1 +1,18 @@
-<p>Country Item Works</p>
+<button mat-button [matMenuTriggerFor]="continents">Country Selector</button>
+
+<mat-menu #continents="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="Africa">Africa</button>
+  <button mat-menu-item [matMenuTriggerFor]="NorthAmerica">
+    North America
+  </button>
+</mat-menu>
+
+<mat-menu #Africa="matMenu">
+  <button mat-menu-item>Nigeria</button>
+  <button mat-menu-item>Ghana</button>
+</mat-menu>
+
+<mat-menu #NorthAmerica="matMenu">
+  <button mat-menu-item>Canada</button>
+  <button mat-menu-item>USA</button>
+</mat-menu>

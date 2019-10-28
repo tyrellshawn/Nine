@@ -3,38 +3,54 @@
     <mat-toolbar color="primary" class="navbar" [routerLink]="'/home'">
       <img src="assets/nine_logo.png" />
     </mat-toolbar>
-    
-      <!-- Should be shown when user is logged in -->
-      <mat-nav-list *ngIf="!isAuthenticated(); else Authenticated">
-          <a mat-list-item routerLinkActive="active" [routerLink]="'/signup'">Sign Up</a>
-          <a mat-list-item routerLinkActive="active" [routerLink]="'/signin'">Sign In</a>
-      </mat-nav-list>
 
-      <!-- Should be hidden when user is not logged in -->
-      <ng-template #Authenticated>
-        <mat-nav-list>
-          <a mat-list-item routerLinkActive="active" [routerLink]="'/social'">Social</a>
-          <a mat-list-item routerLinkActive="active" [routerLink]="'/chat'">Chat</a>
-          <a mat-list-item routerLinkActive="active" [routerLink]="'/financial'">Financial</a>
-          <a mat-list-item routerLinkActive="active" [routerLink]="'/iou'">IOU</a>
-          <a mat-list-item routerLinkActive="active" [routerLink]="'/transfer'">Transfer</a>
-          <a mat-list-item (click)="logoutUser()">Logoff</a>
-        </mat-nav-list>
+    <!-- Should be shown when user is logged in -->
+    <mat-nav-list>
+      <a mat-list-item routerLinkActive="active" [routerLink]="'/simulator'"
+        >Simulator</a
+      >
+    </mat-nav-list>
+    <mat-nav-list *ngIf="!isAuthenticated(); else Authenticated">
+      <a mat-list-item routerLinkActive="active" [routerLink]="'/signup'"
+        >Sign Up</a
+      >
+      <a mat-list-item routerLinkActive="active" [routerLink]="'/signin'"
+        >Sign In</a
+      >
+    </mat-nav-list>
+
+    <!-- Should be hidden when user is not logged in -->
+    <ng-template #Authenticated>
+      <mat-nav-list>
+        <a mat-list-item routerLinkActive="active" [routerLink]="'/social'"
+          >Social</a
+        >
+        <a mat-list-item routerLinkActive="active" [routerLink]="'/chat'"
+          >Chat</a
+        >
+        <a mat-list-item routerLinkActive="active" [routerLink]="'/financial'"
+          >Financial</a
+        >
+        <a mat-list-item routerLinkActive="active" [routerLink]="'/iou'">IOU</a>
+        <a mat-list-item routerLinkActive="active" [routerLink]="'/transfer'"
+          >Transfer</a
+        >
+        <a mat-list-item (click)="logoutUser()">Logoff</a>
+      </mat-nav-list>
     </ng-template>
   </mat-sidenav>
 
   <mat-sidenav-content>
     <mat-toolbar color="primary" class="navbar">
-      <img class="nine_logo" src="assets/nine_logo.png" routerLink="/home"/>
+      <img class="nine_logo" src="assets/nine_logo.png" routerLink="/home" />
       <button
-          type="button"
-          aria-label="Toggle sidenav"
-          mat-icon-button
-          (click)="drawer.toggle()"
-          >
-          <mat-icon aria-label="Side nav toggle icon">Menu</mat-icon>
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+      >
+        <mat-icon aria-label="Side nav toggle icon">Menu</mat-icon>
       </button>
-      
     </mat-toolbar>
   </mat-sidenav-content>
 </mat-sidenav-container>
