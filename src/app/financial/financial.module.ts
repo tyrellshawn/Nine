@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { FinancialComponent } from './financial.component';
 import { FinancialRoutingModule } from './financial-routing.module';
+import { MaterialModule } from '../material.module';
 
 @NgModule({
   declarations: [
@@ -10,6 +11,7 @@ import { FinancialRoutingModule } from './financial-routing.module';
   ],
   imports: [
     CommonModule,
+    MaterialModule,
     FinancialRoutingModule
   ]
 })

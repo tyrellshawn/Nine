@@ -1,8 +1,19 @@
-.example-container {
-  display: flex;
-  flex-direction: column;
+.bottom-text {
+  padding-top: 0.5em;
+  font-size: 1.3em;
+}
+ 
+.expand-width {
+  width: 100%;
 }
 
-.example-container > * {
-  width: 100%;
+.outside-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+}
+
+button{
+  margin-right: 0.5em;
 }

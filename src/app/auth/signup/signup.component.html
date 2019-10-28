@@ -1,69 +1,66 @@
-<div class="container">
-  <div class="row ml-auto justify-content-md-center">
-    <div class="col-sm-12 col-md-10 col-lg-8 col-xl-8">
+<div class="outside-container">
+    <mat-card-content>
+        <form [formGroup]="signUpForm" (ngSubmit)="onSignUp()">
+           <mat-form-field class="expand-width">
+                  <mat-label>First Name</mat-label>
+                  <input  
+                    matInput 
+                    type="text"
+                    placeholder="First name"
+                    name="firstname"
+                    formControlName="firstname"
+                    required>
+               </mat-form-field>
+               <mat-form-field class="expand-width">
+                  <mat-label>Last Name</mat-label>
+                  <input
+                    matInput
+                    type="text"
+                    placeholder="Last Name"
+                    name="lastname"
+                    formControlName="lastname"
+                    required>
+               </mat-form-field>
+               <mat-form-field class="expand-width">
+                  <mat-label>Password</mat-label>
+                  <input  
+                    matInput
+                    type="password"
+                    placeholder="Password"
+                    name="password"
+                    formControlName="password"
+                  >
+               </mat-form-field>
+               <mat-form-field class="expand-width">
+                  <mat-label>Email</mat-label>
+                  <input
+                    matInput
+                    type="email"
+                    placeholder="Email"
+                    name="email"
+                    formControlName="email"
+                  >
+               </mat-form-field>
+               <mat-form-field class="expand-width">
+                  <mat-label>Phone Number</mat-label>
+                  <input
+                    matInput
+                    type="text"
+                    placeholder="Phone Number"
+                    name="phoneNumber"
+                    formControlName="phoneNumber"
+                  >
+               </mat-form-field>
 
-          <h1>Sign Up</h1>
+              <button 
+                mat-raised-button
+                color="primary"
+                type="submit"
+              >
+                Sign up
+              </button>
+        </form>
 
-          <form [formGroup]="signUpForm" (ngSubmit)="onSignUp()">
-
-            <div class="form-group">
-              <label for="email" class="text-label">Email</label>
-              <input
-                type="email"
-                name="email"
-                formControlName='email'
-                class="form-control"
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="firstname" class="text-label">First Name</label>
-              <input
-                type="text"
-                name="firstname"
-                formControlName="firstname"
-                class="form-control"
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="lastname" class="text-label">Last Name</label>
-              <input
-                type="text"
-                name="lastname"
-                formControlName="lastname"
-                class="form-control"
-              />
-            </div>
-
-            <div class="form-group">
-                <label for="phoneNumber" class="text-label">Phone Number</label>
-                <input
-                  type="text"
-                  name="phoneNumber"
-                  formControlName="phoneNumber"
-                  class="form-control"
-                />
-              </div>
-          
-            <div class="form-group">
-              <label for="password" class="text-label">Password</label>
-              <input
-                type="password"
-                name="password"
-                formControlName="password"
-                class="form-control transparent-input"
-              />
-            </div>
-          
-            <button class="btn btn-primary" type="submit">Sign up</button>
-          </form>
-
-        <p class="lead bottom-text">Already have an account? <a routerLink="/signin">Sign In</a></p>
-
-    </div>
-  </div>
-
+        <p class="bottom-text">Already have an account? <a routerLink="/signin">Sign In</a></p>
+      </mat-card-content>
 </div>
-
-
