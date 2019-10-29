@@ -1,3 +1,7 @@
+<mat-card>
+  <img #countryImg />
+  <div #countryName></div>
+</mat-card>
 <button mat-button [matMenuTriggerFor]="continents">Country Selector</button>
 
 <mat-menu #continents="matMenu">
@@ -8,11 +12,11 @@
 </mat-menu>
 
 <mat-menu #Africa="matMenu">
-  <button mat-menu-item>Nigeria</button>
+  <button mat-menu-item (click)="setCountry('Nigeria')">Nigeria</button>
   <button mat-menu-item>Ghana</button>
 </mat-menu>
 
 <mat-menu #NorthAmerica="matMenu">
-  <button mat-menu-item>Canada</button>
+  <button mat-menu-item (click)="setCountry('Canada')">Canada</button>
   <button mat-menu-item>USA</button>
 </mat-menu>

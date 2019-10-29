@@ -1,3 +1,24 @@
-<p>
-  Provider Item Works
-</p>
+<mat-card>
+  <img #providerImg />
+  <div #providerName></div>
+</mat-card>
+<button mat-button [matMenuTriggerFor]="providers">Provider Selector</button>
+
+<mat-menu #providers="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="Services">Services</button>
+  <button mat-menu-item [matMenuTriggerFor]="Banks">
+    Banks
+  </button>
+</mat-menu>
+
+<mat-menu #Services="matMenu">
+  <button mat-menu-item (click)="setProvider('Western Union')">
+    Western Union
+  </button>
+  <button mat-menu-item (click)="setProvider('Money Gram')">Money Gram</button>
+</mat-menu>
+
+<mat-menu #Banks="matMenu">
+  <button mat-menu-item>RBC</button>
+  <button mat-menu-item>CIBC</button>
+</mat-menu>
