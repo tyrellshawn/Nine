@@ -4,6 +4,8 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { Subscription, Subject, Observable } from 'rxjs';
 import * as firebase from 'firebase/app';
+import { NotificationService } from '../services/notification.service';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -22,18 +24,26 @@ export class AuthService implements OnInit, OnDestroy {
   constructor(
     private firebaseAuth: AngularFireAuth,
     private firebaseDatabase: AngularFireDatabase,
+    private notificationService: NotificationService,
     private router: Router
   ) {
     this.firebaseAuth.auth.onAuthStateChanged(user => {
       if (user) {
-        // User is signed in.
-        console.log('User is signed in');
-        console.log(user);
-        this.token = user.refreshToken;
-        this.user = firebaseAuth.authState;
+        // User is signed in and email has been verified
 
-        this.email = user.email;
-        console.log('The User email is: ' + this.email);
+        if (user.emailVerified){
+          console.log('User is signed in');
+          console.log(user);
+          this.token = user.refreshToken;
+          this.user = firebaseAuth.authState;
+
+          this.email = user.email;
+          console.log('The User email is: ' + this.email);
+        } else {
+          console.log("User has not verified email.");
+          this.notificationService.notification$.next('User has not verified email.');
+        }
+        
       } else {
         // User is signed out.
         console.log('User is NOT signed in');
@@ -69,6 +79,7 @@ export class AuthService implements OnInit, OnDestroy {
         this.firebaseDatabase.database
           .ref('/users')
           .push({ email, firstname, lastname, phoneNumber });
+        this.firebaseAuth.auth.currentUser.sendEmailVerification();
         this.router.navigate(['/signin']);
         // this.loginUserWithEmail(email, password);
       })
@@ -81,16 +92,20 @@ export class AuthService implements OnInit, OnDestroy {
     this.firebaseAuth.auth
       .signInWithEmailAndPassword(email, password)
       .then(response => {
-        this.authState = response;
-
-        this.router.navigate(['/']);
-        console.log(this.firebaseAuth.auth.currentUser);
-        this.firebaseAuth.auth.currentUser
-          .getIdToken()
-          .then((token: string) => {
-            this.token = token;
-            console.log('Authenticated: ' + this.isAuthenticated());
-          });
+        const currentUser = this.firebaseAuth.auth.currentUser;
+        if(currentUser.emailVerified){
+          this.authState = response;
+          this.router.navigate(['/']);
+          currentUser
+            .getIdToken()
+            .then((token: string) => {
+              this.token = token;
+              console.log('Authenticated: ' + this.isAuthenticated());
+            });
+        } else{
+          console.log("Please verify your email!");
+          this.notificationService.notification$.next('User has not verified email.');
+        }
       })
       .catch(error => console.error(error));
   }
