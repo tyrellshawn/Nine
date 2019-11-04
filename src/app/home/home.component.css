@@ -1,4 +1,4 @@
-.landing_photo {
+/* .landing_photo {
   position: absolute;
   padding-left: 30%;
   top: 30%;
@@ -19,4 +19,16 @@
   position: absolute;
   padding-left: 50%;
   padding-top: 20%;
+} */
+
+.mat-card {
+  max-width: 400px;
+  min-width: 300px;
+}
+
+.main_content {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

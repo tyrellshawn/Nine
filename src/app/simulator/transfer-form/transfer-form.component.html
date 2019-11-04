@@ -1,6 +1,13 @@
-<form [formGroup]>
-  <mat-form-field class="expand-width">
-    <mat-label>Transfer Amount</mat-label>
-    <input matInput type="text" placeholder="Amount" name="amount" />
-  </mat-form-field>
-</form>
+<mat-form-field class="expand-width">
+  <mat-label>Transfer Amount</mat-label>
+  <input
+    matInput
+    type="number"
+    placeholder="Transfer Amount"
+    [ngModel]="testPrice | currency: 'USD':'symbol':'2.2'"
+    [ngModelOptions]="{ updateOn: 'blur' }"
+  />
+  <span matPrefix>$&nbsp;</span>
+  <span matSuffix>.00</span>
+</mat-form-field>
+<button mat-button>Send</button>

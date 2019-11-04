@@ -17,7 +17,8 @@
 }
 
 .navbar {
-    background: #008080;
+  background: #008080;
+  display: none;
 }
 
 .nine_logo {
