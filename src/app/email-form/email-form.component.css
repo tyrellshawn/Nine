@@ -1,0 +1,17 @@
+.mat-card {
+  max-width: 400px;
+  min-width: 300px;
+}
+
+.main_content {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input {
+  background: #ffffff;
+  border: 1px solid #e7e7e7;
+  box-sizing: border-box;
+  border-radius: 9px 3px;
+}

@@ -9,8 +9,9 @@ import { AuthModule } from './auth/auth.module';
 import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SimulatorFormModule } from './simulator/simulator-form/simulator-form.module';
+import { EmailFormComponent } from './email-form/email-form.component';
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HomeComponent],
+  declarations: [AppComponent, NavbarComponent, HomeComponent, EmailFormComponent],
   imports: [
     BrowserModule,
     AuthModule,

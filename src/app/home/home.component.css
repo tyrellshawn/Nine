@@ -32,3 +32,15 @@
   justify-content: center;
   align-items: center;
 }
+.main_button {
+  display: flex;
+  justify-content: center;
+}
+.tap_to_join {
+  color: #ffffff;
+  background: #000000;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 9px 3px;
+  max-width: 400px;
+  min-width: 300px;
+}

@@ -40,4 +40,5 @@ testem.log
 Thumbs.db
 
 package-lock.json
-.firebase/hosting.ZGlzdFxuaW5lLWFwcA.cache
+.firebase/
+.firebase/
